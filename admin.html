@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Ranjan Stone Engravings</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Ranjan <span>Admin</span></a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" target="_blank">View Site</a></li>
+                    <li><a href="#" id="logout-btn">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Login Section -->
+    <div id="login-section" class="container"
+        style="height: 100vh; display: flex; align-items: center; justify-content: center;">
+        <div class="admin-card" style="width: 100%; max-width: 400px; text-align: center;">
+            <h2 style="margin-bottom: 20px;">Admin Login</h2>
+            <div class="form-group">
+                <input type="password" id="password-input" placeholder="Enter Password">
+            </div>
+            <button id="login-btn" class="btn btn-primary" style="width: 100%;">Login</button>
+            <p id="login-error" style="color: #ff4d4d; margin-top: 10px; display: none;">Incorrect Password</p>
+        </div>
+    </div>
+
+    <!-- Dashboard Section -->
+    <div id="dashboard-section" class="admin-container" style="display: none;">
+        <div class="admin-header">
+            <h1>Dashboard</h1>
+            <button id="refresh-btn" class="btn">Refresh Data</button>
+        </div>
+
+        <div class="admin-card">
+            <h3>Add New Blog Post</h3>
+            <form id="add-blog-form">
+                <div class="form-group">
+                    <label>Title</label>
+                    <input type="text" id="blog-title" required>
+                </div>
+                <div class="form-group">
+                    <label>Image URL (e.g., images/granite.png)</label>
+                    <input type="text" id="blog-image" value="images/hero.png" required>
+                </div>
+                <div class="form-group">
+                    <label>Content (HTML allowed)</label>
+                    <textarea id="blog-content" rows="6" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Publish Post</button>
+            </form>
+        </div>
+
+        <div class="admin-card">
+            <h3>Manage Blog Posts</h3>
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="blog-table-body">
+                    <!-- Rows loaded via JS -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/data.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Simple Auth
+            const checkAuth = () => {
+                if (sessionStorage.getItem('isAdmin') === 'true') {
+                    $('#login-section').hide();
+                    $('#dashboard-section').fadeIn();
+                    loadBlogs();
+                } else {
+                    $('#login-section').show();
+                    $('#dashboard-section').hide();
+                }
+            };
+
+            $('#login-btn').click(function () {
+                const pwd = $('#password-input').val();
+                if (pwd === 'admin123') { // Simple password
+                    sessionStorage.setItem('isAdmin', 'true');
+                    checkAuth();
+                } else {
+                    $('#login-error').show();
+                }
+            });
+
+            $('#logout-btn').click(function (e) {
+                e.preventDefault();
+                sessionStorage.removeItem('isAdmin');
+                checkAuth();
+            });
+
+            // Blog Management
+            function loadBlogs() {
+                const blogs = DataManager.getBlogs();
+                const tbody = $('#blog-table-body');
+                tbody.empty();
+                blogs.forEach(blog => {
+                    tbody.append(`
+                        <tr>
+                            <td>${blog.title}</td>
+                            <td>${blog.date}</td>
+                            <td>
+                                <button class="action-btn delete-btn" data-id="${blog.id}"><i class="fas fa-trash"></i> Delete</button>
+                            </td>
+                        </tr>
+                    `);
+                });
+            }
+
+            $('#add-blog-form').submit(function (e) {
+                e.preventDefault();
+                const newBlog = {
+                    title: $('#blog-title').val(),
+                    image: $('#blog-image').val(),
+                    content: $('#blog-content').val(),
+                    author: "Admin"
+                };
+                DataManager.addBlog(newBlog);
+                alert('Blog published successfully!');
+                $('#add-blog-form')[0].reset();
+                loadBlogs();
+            });
+
+            $(document).on('click', '.delete-btn', function () {
+                if (confirm('Are you sure you want to delete this post?')) {
+                    const id = $(this).data('id');
+                    DataManager.deleteBlog(id);
+                    loadBlogs();
+                }
+            });
+
+            checkAuth();
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Details | Ranjan Stone Engravings</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Ranjan <span>Engravings</span></a>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <div class="container">
+            <h1 id="service-title">Loading...</h1>
+            <div class="divider"></div>
+            <p id="service-desc" style="max-width: 600px; margin: 0 auto;"></p>
+        </div>
+    </div>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Work</h2>
+                <div class="divider"></div>
+                <p>Recent Projects in this Category</p>
+            </div>
+            <div id="service-gallery" class="blog-grid">
+                <!-- Gallery items loaded via JS -->
+            </div>
+            <div id="no-images" style="text-align: center; display: none;">
+                <p>No specific images found for this category yet.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-dark" style="text-align: center;">
+        <div class="container">
+            <h2>Interested in this Service?</h2>
+            <p style="margin: 20px 0; color: var(--text-gray);">Contact us today for a free consultation and quote.</p>
+            <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Ranjan Stone Engravings. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/data.js?v=2"></script>
+    <script src="js/main.js"></script>
+    <script>
+        $(document).ready(function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const serviceId = urlParams.get('id');
+            const services = DataManager.getServices();
+            const service = services.find(s => s.id === serviceId);
+
+            if (service) {
+                document.title = service.title + " | Ranjan Stone Engravings";
+                $('#service-title').text(service.title);
+                $('#service-desc').text(service.description);
+
+                // Load Gallery Images for this Category
+                const allGallery = DataManager.getGallery();
+                const filteredGallery = allGallery.filter(item => item.category === service.category);
+                const container = $('#service-gallery');
+
+                if (filteredGallery.length > 0) {
+                    filteredGallery.forEach(item => {
+                        const html = `
+                            <div class="blog-card">
+                                <div class="blog-img" style="height: 300px;">
+                                    <img src="${item.src}" alt="${item.title}">
+                                </div>
+                                <div class="blog-content" style="text-align: center; padding: 15px;">
+                                    <h3 style="font-size: 1.2rem;">${item.title}</h3>
+                                </div>
+                            </div>
+                        `;
+                        container.append(html);
+                    });
+                } else {
+                    $('#no-images').show();
+                }
+            } else {
+                $('#service-title').text('Service Not Found');
+                $('#service-desc').text('Please return to the services page.');
+            }
+        });
+    </script>
+</body>
+
+</html>

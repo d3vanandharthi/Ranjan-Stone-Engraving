@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ranjanengravings.com/sitemap.xml

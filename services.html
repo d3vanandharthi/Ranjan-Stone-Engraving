@@ -4,7 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | Ranjan Stone Engravings</title>
+    <title>Our Services | Granite & Marble Engraving | Ranjan Stone Engravings</title>
+    <meta name="description"
+        content="Explore our services: Memorial Tombstones, House Name Plates, Church Altars, and Laser Engraving. Custom stone artistry in Mapusa, Goa.">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ranjanengravings.com/services.html">
+    <meta property="og:title" content="Our Services | Ranjan Stone Engravings">
+    <meta property="og:description"
+        content="Explore our services: Memorial Tombstones, House Name Plates, Church Altars, and Laser Engraving.">
+    <meta property="og:image" content="https://ranjanengravings.com/images/hero.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,6 +24,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 
 <body>
@@ -47,55 +58,8 @@
 
     <section class="section">
         <div class="container">
-            <div class="blog-grid">
-                <div class="blog-card">
-                    <div class="blog-img">
-                        <img src="images/granite.png" alt="Memorials">
-                    </div>
-                    <div class="blog-content">
-                        <i class="fas fa-monument"
-                            style="font-size: 2rem; color: var(--primary-color); margin-bottom: 15px;"></i>
-                        <h3>Memorials & Tombstones</h3>
-                        <p>We specialize in creating respectful and durable tombstones. From simple markers to elaborate
-                            monuments, we ensure every detail is perfect.</p>
-                    </div>
-                </div>
-                <div class="blog-card">
-                    <div class="blog-img">
-                        <img src="images/marble.png" alt="Niches">
-                    </div>
-                    <div class="blog-content">
-                        <i class="fas fa-church"
-                            style="font-size: 2rem; color: var(--primary-color); margin-bottom: 15px;"></i>
-                        <h3>Niches & Religious Art</h3>
-                        <p>Our skilled artisans can carve intricate religious motifs and scriptures for church niches,
-                            altars, and prayer rooms.</p>
-                    </div>
-                </div>
-                <div class="blog-card">
-                    <div class="blog-img">
-                        <img src="images/nameplate.png" alt="Name Plates">
-                    </div>
-                    <div class="blog-content">
-                        <i class="fas fa-home"
-                            style="font-size: 2rem; color: var(--primary-color); margin-bottom: 15px;"></i>
-                        <h3>Name Plates & Signage</h3>
-                        <p>Make a statement with a custom stone name plate. We offer designs in Granite, Marble, and
-                            other premium stones.</p>
-                    </div>
-                </div>
-                <div class="blog-card">
-                    <div class="blog-img">
-                        <img src="images/hero.png" alt="Laser Engraving">
-                    </div>
-                    <div class="blog-content">
-                        <i class="fas fa-bolt"
-                            style="font-size: 2rem; color: var(--primary-color); margin-bottom: 15px;"></i>
-                        <h3>Laser Engraving</h3>
-                        <p>For high-precision needs, our laser engraving services can etch detailed logos, photos, and
-                            text onto various surfaces.</p>
-                    </div>
-                </div>
+            <div id="services-list" class="blog-grid">
+                <!-- Loaded via JS -->
             </div>
         </div>
     </section>
@@ -107,7 +71,30 @@
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/data.js?v=3"></script>
     <script src="js/main.js"></script>
+    <script>
+        $(document).ready(function () {
+            const services = DataManager.getServices();
+            const container = $('#services-list');
+
+            services.forEach(s => {
+                container.append(`
+                    <div class="blog-card" onclick="window.location.href='service-detail.html?id=${s.id}'" style="cursor: pointer;">
+                        <div class="blog-img">
+                            <img src="${s.image}" alt="${s.title}">
+                        </div>
+                        <div class="blog-content">
+                            <i class="fas ${s.icon}" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 15px;"></i>
+                            <h3>${s.title}</h3>
+                            <p>${s.description}</p>
+                            <span style="color: var(--primary-color); font-size: 0.9rem; margin-top: 10px; display: inline-block;">View Work <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                `);
+            });
+        });
+    </script>
 </body>
 
 </html>

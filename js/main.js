@@ -30,4 +30,6 @@ $(document).ready(function () {
             }, 800);
         }
     });
+    // WhatsApp Button
+    $('body').append('<a href="https://wa.me/919822581297" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp whatsapp-icon"></i></a>');
 });

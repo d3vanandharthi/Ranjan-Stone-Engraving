@@ -49,9 +49,16 @@ const DEFAULT_BLOGS = [
 ];
 
 const DEFAULT_GALLERY = [
-    { id: 1, src: "images/granite.png", category: "Granite", title: "Granite Memorial" },
-    { id: 2, src: "images/marble.png", category: "Marble", title: "Marble Relief" },
-    { id: 3, src: "images/nameplate.png", category: "Name Plate", title: "Custom Name Plate" }
+    { id: 1, src: "images/memorial_tombstone.png", category: "Memorials", title: "Granite Tombstone" },
+    { id: 2, src: "images/memorial_azulejos.png", category: "Memorials", title: "Azulejos Tile Monument" },
+    { id: 3, src: "images/memorial_restoration.png", category: "Memorials", title: "Grave Restoration" },
+    { id: 4, src: "images/home_nameplate.png", category: "Home", title: "Granite Name Plate" },
+    { id: 5, src: "images/home_gate_sign.png", category: "Home", title: "Gate Signage" },
+    { id: 6, src: "images/home_tulsi.png", category: "Home", title: "Tulsi Vrindavan Etching" },
+    { id: 7, src: "images/business_foundation.png", category: "Business", title: "Foundation Stone" },
+    { id: 8, src: "images/business_altar.png", category: "Business", title: "Altar Engraving" },
+    { id: 9, src: "images/business_resort.png", category: "Business", title: "Resort Entrance Rock" },
+    { id: 10, src: "images/niche_pet.png", category: "Niche", title: "Pet Memorial" }
 ];
 
 const DataManager = {
@@ -59,9 +66,8 @@ const DataManager = {
         if (!localStorage.getItem('ranjan_blogs')) {
             localStorage.setItem('ranjan_blogs', JSON.stringify(DEFAULT_BLOGS));
         }
-        if (!localStorage.getItem('ranjan_gallery')) {
-            localStorage.setItem('ranjan_gallery', JSON.stringify(DEFAULT_GALLERY));
-        }
+        // Always update gallery with new images on init for this update
+        localStorage.setItem('ranjan_gallery', JSON.stringify(DEFAULT_GALLERY));
     },
 
     getBlogs: function () {
@@ -96,6 +102,103 @@ const DataManager = {
         item.id = Date.now();
         gallery.push(item);
         localStorage.setItem('ranjan_gallery', JSON.stringify(gallery));
+    },
+
+    getServices: function () {
+        return [
+            {
+                id: "memorials",
+                title: "Memorials & Tombstones",
+                icon: "fa-cross",
+                description: "Granite tombstones, Azulejos tiles, and grave restoration for Catholic, Hindu, & Muslim communities.",
+                category: "Memorials",
+                image: "images/memorial_tombstone.png"
+            },
+            {
+                id: "home",
+                title: "For Home",
+                icon: "fa-home",
+                description: "Premium nameplates, gate signs, and Tulsi Vrindavan etching for your dream home.",
+                category: "Home",
+                image: "images/home_nameplate.png"
+            },
+            {
+                id: "business",
+                title: "Business & Church",
+                icon: "fa-church",
+                description: "Foundation stones, altar engravings, and resort signage for institutions and businesses.",
+                category: "Business",
+                image: "images/business_foundation.png"
+            },
+            {
+                id: "niche",
+                title: "Specialty & Artistic",
+                icon: "fa-paw",
+                description: "Pet memorials, bar countertops, and custom artistic engravings.",
+                category: "Niche",
+                image: "images/niche_pet.png"
+            }
+        ];
+    },
+
+    getTestimonials: function () {
+        return [
+            {
+                name: "Norton Vaz",
+                role: "Local Guide",
+                text: "Phenomenal service and product finishing! I'm from Mumbai and have a house in Tivim, Goa. The 1st time I met Dev's family they were so kind... Absolutely fantastic!! Thank you Dev, for the fabulous stone work done."
+            },
+            {
+                name: "David Pereira",
+                role: "Client",
+                text: "Really helped me with a Gravestone when one of my friends parents passed away. Devanand is really a Master at his craft. Positive: Responsiveness, Quality, Professionalism, Value."
+            },
+            {
+                name: "Riya Paiginkar",
+                role: "Client",
+                text: "I would like to take this opportunity to thank Ranjan Engravings for the great service rendered to us and in particular Dev. You got me the best Design ever in just a few moments after I spoke to you."
+            },
+            {
+                name: "Chase D'Souza",
+                role: "Client",
+                text: "I Liked their service and the quality of engraving they provide. beautiful and neat work, Thanks Dev for the beautiful Niche Stone."
+            },
+            {
+                name: "Joline Almeida",
+                role: "Client",
+                text: "Very good work and very committed young man. A person with perfection."
+            },
+            {
+                name: "Kynan Colaco",
+                role: "Client",
+                text: "Dev is very professional as compared to his competitors I came across. His work is flawless. Kudos to him and his team. Will definitely recommend him to others."
+            }
+        ];
+    },
+
+    getFAQs: function () {
+        return [
+            {
+                question: "Do you offer restoration for old Portuguese graves?",
+                answer: "Yes, we specialize in cleaning and re-gilding (repainting in gold) old faded lettering on ancient family graves in church cemeteries."
+            },
+            {
+                question: "Are your nameplates weather-proof?",
+                answer: "Absolutely. We use high-quality granite and weather-resistant gold leaf paint to ensure your nameplate withstands Goa's heavy monsoons."
+            },
+            {
+                question: "Do you make temporary cross markers?",
+                answer: "Yes, we provide simple marble or granite markers for immediate use after burial while the main tombstone is being prepared."
+            },
+            {
+                question: "Can you engrave in Konkani or Portuguese?",
+                answer: "Yes, we offer multilingual engraving in English, Konkani (Romimi script), and Portuguese, which is very important for many Goan families."
+            },
+            {
+                question: "Do you do work for hotels and resorts?",
+                answer: "Yes, we create rustic boulder signage, room number plaques, and wayfinding markers perfect for beach resorts and heritage hotels."
+            }
+        ];
     }
 };
 

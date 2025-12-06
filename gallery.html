@@ -15,8 +15,10 @@
     <meta property="og:description"
         content="View our portfolio of completed projects. Granite tombstones, marble reliefs, and custom name plates.">
     <meta property="og:image" content="https://ranjanengravings.com/images/hero.png">
+    <link rel="canonical" href="https://ranjanengravings.com/gallery.html">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Lato:wght@300;400;700&display=swap"
@@ -76,11 +78,14 @@
     <script>
         $(document).ready(function () {
             const gallery = DataManager.getGallery();
-            const container = $('#gallery-grid');
+            const container = $('#gallery-grid'); // This ID is already correct in HTML
+
+            // Add the class 'gallery-grid' to the container so main.js finds it
+            container.addClass('gallery-grid');
 
             gallery.forEach(item => {
                 const html = `
-                    <div class="blog-card">
+                    <div class="blog-card gallery-item">
                         <div class="blog-img" style="height: 300px;">
                             <img src="${item.src}" alt="${item.title}">
                         </div>

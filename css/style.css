@@ -156,6 +156,7 @@ header {
     background-image: url('../images/hero.webp'), url('../images/hero.png');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     margin-top: 80px;
     /* Header height */
 }
@@ -632,5 +633,6 @@ footer p {
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../images/hero.webp'), url('../images/hero.png');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     text-align: center;
 }

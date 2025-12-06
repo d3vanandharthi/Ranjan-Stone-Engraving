@@ -72,16 +72,15 @@
         </div>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/data.js?v=3"></script>
     <script src="js/main.js"></script>
     <script>
-        $(document).ready(function () {
+        document.addEventListener('DOMContentLoaded', function () {
             const services = DataManager.getServices();
-            const container = $('#services-list');
+            const container = document.getElementById('services-list');
 
             services.forEach(s => {
-                container.append(`
+                container.insertAdjacentHTML('beforeend', `
                     <div class="blog-card" onclick="window.location.href='service-detail.html?id=${s.id}'" style="cursor: pointer;">
                         <div class="blog-img">
                             <img src="${s.image}" alt="${s.title}">

@@ -72,16 +72,15 @@
         </div>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/data.js?v=2"></script>
     <script src="js/main.js"></script>
     <script>
-        $(document).ready(function () {
+        document.addEventListener('DOMContentLoaded', function () {
             const gallery = DataManager.getGallery();
-            const container = $('#gallery-grid'); // This ID is already correct in HTML
+            const container = document.getElementById('gallery-grid');
 
             // Add the class 'gallery-grid' to the container so main.js finds it
-            container.addClass('gallery-grid');
+            container.classList.add('gallery-grid');
 
             gallery.forEach(item => {
                 const html = `
@@ -95,7 +94,7 @@
                         </div>
                     </div>
                 `;
-                container.append(html);
+                container.insertAdjacentHTML('beforeend', html);
             });
         });
     </script>

@@ -97,6 +97,7 @@
 
                     <div class="map-placeholder" style="margin-top: 30px; border: 1px solid var(--primary-color);">
                         <iframe
+                            title="Google Maps location of Ranjan Stone Engravings workshop in Karaswada, Mapusa, Goa"
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3842.4254546527136!2d73.81536647489425!3d15.622316584994254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbfeb23d5ad86d3%3A0xfa74202cb70626b!2sRanjan%20Stone%20Engraving!5e0!3m2!1sen!2sin!4v1765038791692!5m2!1sen!2sin"
                             width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -113,17 +114,21 @@
                             value="https://ranjanengravings.com/contact.html?success=true">
 
                         <div class="form-group">
-                            <input type="text" name="name" placeholder="Your Name" required>
+                            <label for="contact-name">Your Name</label>
+                            <input type="text" id="contact-name" name="name" placeholder="Your Name" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" name="email" placeholder="Your Email" required>
+                            <label for="contact-email">Your Email</label>
+                            <input type="email" id="contact-email" name="email" placeholder="Your Email" required>
                         </div>
                         <div class="form-group">
-                            <input type="tel" name="phone" placeholder="Phone Number">
+                            <label for="contact-phone">Phone Number</label>
+                            <input type="tel" id="contact-phone" name="phone" placeholder="Phone Number">
                         </div>
                         <div class="form-group">
-                            <textarea name="message" placeholder="Message / Inquiry Details" rows="5"
-                                required></textarea>
+                            <label for="contact-message">Message / Inquiry Details</label>
+                            <textarea id="contact-message" name="message" placeholder="Message / Inquiry Details"
+                                rows="5" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
                     </form>
@@ -138,7 +143,6 @@
         </div>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
     <script src="js/main.js" defer></script>
 </body>
 

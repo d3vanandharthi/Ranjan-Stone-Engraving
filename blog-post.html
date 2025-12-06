@@ -60,19 +60,18 @@
         </div>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/data.js?v=2"></script>
     <script src="js/main.js"></script>
     <script>
-        $(document).ready(function () {
+        document.addEventListener('DOMContentLoaded', function () {
             const urlParams = new URLSearchParams(window.location.search);
             const id = urlParams.get('id');
             const post = DataManager.getBlogById(id);
 
             if (post) {
                 document.title = post.title + " | Ranjan Stone Engravings";
-                $('#post-title').text(post.title);
-                $('#post-meta').html(`<i class="far fa-calendar"></i> ${post.date} &nbsp;|&nbsp; <i class="far fa-user"></i> ${post.author}`);
+                document.getElementById('post-title').textContent = post.title;
+                document.getElementById('post-meta').innerHTML = `<i class="far fa-calendar"></i> ${post.date} &nbsp;|&nbsp; <i class="far fa-user"></i> ${post.author}`;
 
                 const contentHtml = `
                     <img src="${post.image}" alt="${post.title}">
@@ -83,9 +82,9 @@
                         <a href="blog.html" class="btn">Back to Blog</a>
                     </div>
                 `;
-                $('#post-content').html(contentHtml);
+                document.getElementById('post-content').innerHTML = contentHtml;
             } else {
-                $('#post-content').html('<p style="text-align:center;">Post not found.</p>');
+                document.getElementById('post-content').innerHTML = '<p style="text-align:center;">Post not found.</p>';
             }
         });
     </script>

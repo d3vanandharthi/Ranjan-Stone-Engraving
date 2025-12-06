@@ -76,11 +76,10 @@
         </div>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/data.js?v=2"></script>
     <script src="js/main.js"></script>
     <script>
-        $(document).ready(function () {
+        document.addEventListener('DOMContentLoaded', function () {
             const urlParams = new URLSearchParams(window.location.search);
             const serviceId = urlParams.get('id');
             const services = DataManager.getServices();
@@ -88,13 +87,13 @@
 
             if (service) {
                 document.title = service.title + " | Ranjan Stone Engravings";
-                $('#service-title').text(service.title);
-                $('#service-desc').text(service.description);
+                document.getElementById('service-title').textContent = service.title;
+                document.getElementById('service-desc').textContent = service.description;
 
                 // Load Gallery Images for this Category
                 const allGallery = DataManager.getGallery();
                 const filteredGallery = allGallery.filter(item => item.category === service.category);
-                const container = $('#service-gallery');
+                const container = document.getElementById('service-gallery');
 
                 if (filteredGallery.length > 0) {
                     filteredGallery.forEach(item => {
@@ -108,14 +107,14 @@
                                 </div>
                             </div>
                         `;
-                        container.append(html);
+                        container.insertAdjacentHTML('beforeend', html);
                     });
                 } else {
-                    $('#no-images').show();
+                    document.getElementById('no-images').style.display = 'block';
                 }
             } else {
-                $('#service-title').text('Service Not Found');
-                $('#service-desc').text('Please return to the services page.');
+                document.getElementById('service-title').textContent = 'Service Not Found';
+                document.getElementById('service-desc').textContent = 'Please return to the services page.';
             }
         });
     </script>

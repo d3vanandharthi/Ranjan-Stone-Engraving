@@ -20,22 +20,85 @@
         content="Expert stone engraving in Mapusa, Goa. Specializing in Granite Tombstones, Marble Name Plates, and Custom Artistry.">
     <meta property="og:image" content="https://ranjanengravings.com/images/hero.png">
 
+    <!-- Critical CSS Inlined for Faster First Paint -->
+    <style>
+        :root {
+            --primary-color: #C5A059;
+            --primary-dark: #A08040;
+            --bg-dark: #1a1a1a;
+            --bg-darker: #121212;
+            --bg-card: #242424;
+            --text-light: #f5f5f5;
+            --text-gray: #ccc;
+            --font-heading: 'Cinzel', serif;
+            --font-body: 'Lato', sans-serif;
+            --transition: all .3s ease
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg-darker);
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            color: var(--primary-color)
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(18, 18, 18, .95);
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(197, 160, 89, .2)
+        }
+
+        .hero {
+            height: 60vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-image: url('../images/hero.webp'), url('../images/hero.png');
+            background-size: cover;
+            background-position: center;
+            margin-top: 80px
+        }
+    </style>
+
+    <!-- Subset Google Fonts - Only needed weights -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload"
-        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Lato:wght@300;400;700&display=swap"
-        as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Lato:wght@300;400;700&display=swap"
-            rel="stylesheet">
-    </noscript>
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style"
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Lato:wght@300;400;700&display=swap" as="style"
         onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Lato:wght@300;400;700&display=swap"
+            rel="stylesheet">
     </noscript>
 
+    <!-- Self-hosted icons replace Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 
     <!-- Preload critical hero image for LCP optimization -->

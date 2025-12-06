@@ -494,14 +494,123 @@ footer p {
         font-size: 25px;
     }
 }
+
 @media (max-width: 480px) {
     .container {
         padding: 0 15px;
     }
+
     .hero h1 {
         font-size: 2rem;
     }
+
     .section-header h2 {
         font-size: 2rem;
     }
+}
+
+/* Scroll to Top Button */
+#scrollTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 110px;
+    /* Above WhatsApp button */
+    right: 40px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: var(--primary-color);
+    color: var(--bg-darker);
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 18px;
+    transition: var(--transition);
+    width: 50px;
+    height: 50px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#scrollTopBtn:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+    #scrollTopBtn {
+        bottom: 80px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        padding: 10px;
+        font-size: 16px;
+    }
+}
+
+/* Lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.lightbox-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 900px;
+    max-height: 80vh;
+    object-fit: contain;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+.close-lightbox {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.close-lightbox:hover,
+.close-lightbox:focus {
+    color: var(--primary-color);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#lightbox-caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
 }

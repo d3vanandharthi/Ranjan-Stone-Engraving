@@ -75,6 +75,11 @@
                                 style="color: inherit; text-decoration: none;">+91 90754 01950</a></span>
                     </div>
                     <div style="margin-bottom: 20px;">
+                        <i class="fas fa-envelope" style="color: var(--primary-color); width: 25px;"></i>
+                        <span><a href="mailto:ranjanstoneengravings@gmail.com"
+                                style="color: inherit; text-decoration: none;">ranjanstoneengravings@gmail.com</a></span>
+                    </div>
+                    <div style="margin-bottom: 20px;">
                         <i class="fas fa-clock" style="color: var(--primary-color); width: 25px;"></i>
                         <span>Mon - Sat: 9:00 AM - 9:00 PM</span>
                     </div>
@@ -87,19 +92,26 @@
                 </div>
 
                 <div class="contact-form-wrapper">
-                    <form class="contact-form" style="background: var(--bg-card); padding: 30px; border-radius: 5px;">
+                    <form class="contact-form" action="https://formspree.io/f/mqakjvoz" method="POST"
+                        style="background: var(--bg-card); padding: 30px; border-radius: 5px;">
                         <h3 style="margin-bottom: 20px;">Send a Message</h3>
+                        <!-- Hidden fields for Formspree -->
+                        <input type="hidden" name="_subject" value="New Inquiry from Website">
+                        <input type="hidden" name="_next"
+                            value="https://d3vanandharthi.github.io/Ranjan-Stone-Engraving/contact.html?success=true">
+
                         <div class="form-group">
-                            <input type="text" placeholder="Your Name" required>
+                            <input type="text" name="name" placeholder="Your Name" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" placeholder="Your Email" required>
+                            <input type="email" name="email" placeholder="Your Email" required>
                         </div>
                         <div class="form-group">
-                            <input type="tel" placeholder="Phone Number">
+                            <input type="tel" name="phone" placeholder="Phone Number">
                         </div>
                         <div class="form-group">
-                            <textarea placeholder="Message / Inquiry Details" rows="5" required></textarea>
+                            <textarea name="message" placeholder="Message / Inquiry Details" rows="5"
+                                required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
                     </form>

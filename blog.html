@@ -72,7 +72,7 @@
             } else {
                 blogs.forEach(blog => {
                     const html = `
-                        <div class="blog-card">
+                        <div class="blog-card" onclick="location.href='blog-post.html?id=${blog.id}'" style="cursor: pointer;">
                             <div class="blog-img">
                                 <img src="${blog.image}" alt="${blog.title}">
                             </div>

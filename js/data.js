@@ -6,44 +6,96 @@
 const DEFAULT_BLOGS = [
     {
         id: 1,
-        title: "The Art of Granite Engraving: A Timeless Tribute",
-        date: "2024-10-15",
-        author: "Ranjan Engraving",
+        title: "Granite vs. Marble: Which is Best for Your Home?",
+        date: "2024-12-01",
+        author: "Devanand",
         image: "images/granite.png",
         content: `
-            <p>Granite engraving is more than just a technical process; it is an art form that has preserved history for centuries. At Ranjan Stone Engravings, we believe that every stroke on a granite slab tells a story that deserves to last forever.</p>
-            <h3>Why Choose Granite?</h3>
-            <p>Granite is one of the hardest natural stones, making it the perfect choice for outdoor memorials and tombstones. It withstands harsh weather conditions, ensuring that the tribute to your loved ones remains pristine for generations.</p>
-            <h3>Our Process</h3>
-            <p>We combine traditional hand-carving techniques with modern laser technology. This allows us to achieve photorealistic details while maintaining the depth and character of traditional engraving.</p>
+            <p>When it comes to choosing natural stone for your home, the debate often settles on two giants: Granite and Marble. Both offer distinct beauty and advantages, but the right choice depends on your lifestyle and where the stone will be used.</p>
+            <h3>Granite: The Durable Warrior</h3>
+            <p>Granite is an igneous rock, formed from cooling magma. This makes it incredibly hard and durable. It is resistant to heat, scratches, and stains, making it the ideal choice for high-traffic areas like kitchen countertops and outdoor nameplates.</p>
+            <h3>Marble: The Elegant Beauty</h3>
+            <p>Marble is a metamorphic rock, known for its classic veins and smooth finish. It exudes luxury and sophistication. However, it is softer and more porous than granite, making it susceptible to etching from acidic substances. It is best suited for bathroom vanities, fireplace surrounds, and decorative flooring.</p>
+            <h3>The Verdict</h3>
+            <p>If you need a stone that can withstand the elements and heavy use, go with <strong>Granite</strong>. If you prioritize timeless elegance and are willing to provide a little extra care, <strong>Marble</strong> is unmatched.</p>
         `
     },
     {
         id: 2,
-        title: "Choosing the Right Stone for Your Name Plate",
-        date: "2024-11-02",
+        title: "The History of Azulejos: Goa's Painted Tiles",
+        date: "2024-11-25",
         author: "Ranjan Engraving",
-        image: "images/nameplate.png",
+        image: "images/memorial_azulejos.png",
         content: `
-            <p>Your home's name plate is the first thing guests see. It sets the tone for your entire property. Choosing the right material is crucial for both aesthetics and durability.</p>
-            <h3>Marble vs. Granite</h3>
-            <p><strong>Marble</strong> offers a classic, soft elegance. It is perfect for intricate relief work and indoor signage. However, it requires more maintenance outdoors.</p>
-            <p><strong>Granite</strong>, on the other hand, is bold and virtually indestructible. It comes in various colors, from deep blacks to rich reds, making it versatile for any architectural style.</p>
+            <p>Walk through the streets of Panjim or Old Goa, and you will see them everywhere—beautiful blue and white ceramic tiles adorning the walls. These are <strong>Azulejos</strong>, a legacy of the Portuguese era that has become an integral part of Goan identity.</p>
+            <h3>Origins</h3>
+            <p>The term 'Azulejo' comes from the Arabic word 'az-zulayj', meaning 'polished stone'. The Portuguese adopted this art form in the 15th century and brought it to Goa. Originally used to depict religious scenes and historical events, they evolved to include floral patterns and geometric designs.</p>
+            <h3>Modern Application</h3>
+            <p>Today, Azulejos are not just for churches. We create custom Azulejos nameplates and house numbers that blend this traditional art with modern aesthetics. They are weather-resistant and add a unique, cultural touch to any Goan home.</p>
         `
     },
     {
         id: 3,
-        title: "Preserving Memories: The Importance of Tombstone Maintenance",
-        date: "2024-11-20",
-        author: "Ranjan Engraving",
-        image: "images/hero.png",
+        title: "Caring for Your Loved One's Tombstone",
+        date: "2024-11-15",
+        author: "Devanand",
+        image: "images/memorial_tombstone.png",
         content: `
-            <p>A tombstone is a sacred marker. While stone is durable, it still needs care to look its best. Here are some tips for maintaining your loved one's memorial.</p>
+            <p>A tombstone is a lasting tribute to a life well-lived. However, exposure to rain, sun, and dust can cause it to weather over time. Proper maintenance ensures that the memorial remains dignified and legible for generations.</p>
+            <h3>Cleaning Tips</h3>
             <ul>
-                <li><strong>Regular Cleaning:</strong> Use soft water and a non-abrasive cloth. Avoid harsh chemicals that can damage the polish.</li>
-                <li><strong>Inspection:</strong> Check for any cracks or chips annually. Early detection prevents major damage.</li>
-                <li><strong>Professional Restoration:</strong> If the engraving has faded, our team can re-paint or re-engrave the lettering to restore its original glory.</li>
+                <li><strong>Water is Best:</strong> Start with clean water and a soft brush. Avoid pressure washers, as they can damage the stone's surface.</li>
+                <li><strong>Neutral Cleaners:</strong> If water isn't enough, use a pH-neutral cleaner specifically designed for stone. Avoid household detergents with acids or bleach.</li>
+                <li><strong>Biological Growth:</strong> Moss and lichen can trap moisture. Gently scrape them off with a wooden or plastic scraper, never metal.</li>
             </ul>
+            <h3>Restoration</h3>
+            <p>If the inscription has faded, do not attempt to paint it yourself with standard paint. We offer professional re-gilding services using weather-resistant gold leaf paint that restores the original luster without harming the stone.</p>
+        `
+    },
+    {
+        id: 4,
+        title: "Why Gold Leaf Engraving is the Gold Standard",
+        date: "2024-11-05",
+        author: "Ranjan Engraving",
+        image: "images/business_foundation.png",
+        content: `
+            <p>When you see a nameplate or foundation stone that gleams brilliantly even from a distance, it is likely finished with <strong>Gold Leaf</strong>. But what makes it superior to standard gold paint?</p>
+            <h3>Real Gold</h3>
+            <p>Gold leaf is made from hammering gold into extremely thin sheets. Unlike paint, which is merely colored pigment, gold leaf retains the non-tarnishing properties of the metal itself.</p>
+            <h3>Longevity</h3>
+            <p>Standard gold paint often turns black or fades within a few years, especially in Goa's humid climate. Gold leaf, when applied correctly with the right primer and size, can last for decades, maintaining its brilliance against the grey granite background.</p>
+        `
+    },
+    {
+        id: 5,
+        title: "The Art of Hand-Carved vs. Laser Engraving",
+        date: "2024-10-28",
+        author: "Devanand",
+        image: "images/niche_pet.png",
+        content: `
+            <p>Technology has changed the stone industry, but has it replaced the artist? At Ranjan Stone Engravings, we use both hand-carving and laser technology, but for different purposes.</p>
+            <h3>Hand-Carving</h3>
+            <p>This is the traditional method using a chisel and mallet. It creates a deep, V-shaped groove that catches the light beautifully. It is ideal for large lettering and simple motifs where depth and character are paramount.</p>
+            <h3>Laser Engraving</h3>
+            <p>Laser allows for incredible precision. We can etch photorealistic portraits, intricate logos, and fine text that would be impossible by hand. It is perfect for black granite where the contrast between the polished surface and the etched grey stone creates a stunning image.</p>
+            <h3>The Best of Both Worlds</h3>
+            <p>We often combine these techniques—using hand-carving for the main name to give it depth, and laser etching for the portrait or decorative border.</p>
+        `
+    },
+    {
+        id: 6,
+        title: "Designing the Perfect House Nameplate",
+        date: "2024-10-15",
+        author: "Ranjan Engraving",
+        image: "images/home_nameplate.png",
+        content: `
+            <p>Your nameplate is the handshake of your home. It welcomes guests and gives a hint of your style before they even step inside. Here are a few tips for designing the perfect one.</p>
+            <h3>Visibility</h3>
+            <p>Ensure the font size is large enough to be read from the street. High contrast is key—gold text on black granite is the most readable combination.</p>
+            <h3>Style Match</h3>
+            <p>If you have a modern villa, go for sleek lines and sans-serif fonts. For a Portuguese-style heritage home, an Azulejos tile or a granite slab with a classic serif font and a floral border fits perfectly.</p>
+            <h3>Content</h3>
+            <p>Keep it simple. The house name and the family name are essential. Adding the house number helps with delivery and navigation.</p>
         `
     }
 ];

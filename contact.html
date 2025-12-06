@@ -20,10 +20,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
+    <link rel="preload"
         href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Lato:wght@300;400;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Lato:wght@300;400;700&display=swap"
+            rel="stylesheet">
+    </noscript>
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </noscript>
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/png" href="images/favicon.png">
@@ -78,8 +87,8 @@
                     </div>
                     <div style="margin-bottom: 20px;">
                         <i class="fas fa-envelope" style="color: var(--primary-color); width: 25px;"></i>
-                        <span><a href="mailto:ranjanstoneengravings@gmail.com"
-                                style="color: inherit; text-decoration: none;">ranjanstoneengravings@gmail.com</a></span>
+                        <span><a href="mailto:d3vanandharthi@gmail.com"
+                                style="color: inherit; text-decoration: none;">d3vanandharthi@gmail.com</a></span>
                     </div>
                     <div style="margin-bottom: 20px;">
                         <i class="fas fa-clock" style="color: var(--primary-color); width: 25px;"></i>
@@ -88,13 +97,14 @@
 
                     <div class="map-placeholder" style="margin-top: 30px; border: 1px solid var(--primary-color);">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3842.666779876543!2d73.8095!3d15.6097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTXCsDM2JzM0LjkiTiA3M8KwNDgnMzQuMiJF!5e0!3m2!1sen!2sin!4v1625000000000!5m2!1sen!2sin"
-                            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3842.4254546527136!2d73.81536647489425!3d15.622316584994254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbfeb23d5ad86d3%3A0xfa74202cb70626b!2sRanjan%20Stone%20Engraving!5e0!3m2!1sen!2sin!4v1765038791692!5m2!1sen!2sin"
+                            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
 
                 <div class="contact-form-wrapper">
-                    <form class="contact-form" action="https://formspree.io/f/mqakjvoz" method="POST"
+                    <form class="contact-form" action="https://formspree.io/f/xgvgzbnl" method="POST"
                         style="background: var(--bg-card); padding: 30px; border-radius: 5px;">
                         <h3 style="margin-bottom: 20px;">Send a Message</h3>
                         <!-- Hidden fields for Formspree -->
@@ -128,8 +138,8 @@
         </div>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+    <script src="js/main.js" defer></script>
 </body>
 
 </html>

@@ -9,7 +9,7 @@ const DEFAULT_BLOGS = [
         title: "Granite vs. Marble: Which is Best for Your Home?",
         date: "2024-12-01",
         author: "Devanand",
-        image: "images/granite.png",
+        image: "images/granite.webp",
         content: `
             <p>When it comes to choosing natural stone for your home, the debate often settles on two giants: Granite and Marble. Both offer distinct beauty and advantages, but the right choice depends on your lifestyle and where the stone will be used.</p>
             <h3>Granite: The Durable Warrior</h3>
@@ -25,7 +25,7 @@ const DEFAULT_BLOGS = [
         title: "The History of Azulejos: Goa's Painted Tiles",
         date: "2024-11-25",
         author: "Ranjan Engraving",
-        image: "images/memorial_azulejos.png",
+        image: "images/memorial_azulejos.webp",
         content: `
             <p>Walk through the streets of Panjim or Old Goa, and you will see them everywhere—beautiful blue and white ceramic tiles adorning the walls. These are <strong>Azulejos</strong>, a legacy of the Portuguese era that has become an integral part of Goan identity.</p>
             <h3>Origins</h3>
@@ -39,7 +39,7 @@ const DEFAULT_BLOGS = [
         title: "Caring for Your Loved One's Tombstone",
         date: "2024-11-15",
         author: "Devanand",
-        image: "images/memorial_tombstone.png",
+        image: "images/memorial_tombstone.webp",
         content: `
             <p>A tombstone is a lasting tribute to a life well-lived. However, exposure to rain, sun, and dust can cause it to weather over time. Proper maintenance ensures that the memorial remains dignified and legible for generations.</p>
             <h3>Cleaning Tips</h3>
@@ -57,7 +57,7 @@ const DEFAULT_BLOGS = [
         title: "Why Gold Leaf Engraving is the Gold Standard",
         date: "2024-11-05",
         author: "Ranjan Engraving",
-        image: "images/business_foundation.png",
+        image: "images/business_foundation.webp",
         content: `
             <p>When you see a nameplate or foundation stone that gleams brilliantly even from a distance, it is likely finished with <strong>Gold Leaf</strong>. But what makes it superior to standard gold paint?</p>
             <h3>Real Gold</h3>
@@ -71,7 +71,7 @@ const DEFAULT_BLOGS = [
         title: "The Art of Hand-Carved vs. Laser Engraving",
         date: "2024-10-28",
         author: "Devanand",
-        image: "images/niche_pet.png",
+        image: "images/niche_pet.webp",
         content: `
             <p>Technology has changed the stone industry, but has it replaced the artist? At Ranjan Stone Engravings, we use both hand-carving and laser technology, but for different purposes.</p>
             <h3>Hand-Carving</h3>
@@ -87,7 +87,7 @@ const DEFAULT_BLOGS = [
         title: "Designing the Perfect House Nameplate",
         date: "2024-10-15",
         author: "Ranjan Engraving",
-        image: "images/home_nameplate.png",
+        image: "images/home_nameplate.webp",
         content: `
             <p>Your nameplate is the handshake of your home. It welcomes guests and gives a hint of your style before they even step inside. Here are a few tips for designing the perfect one.</p>
             <h3>Visibility</h3>
@@ -101,16 +101,16 @@ const DEFAULT_BLOGS = [
 ];
 
 const DEFAULT_GALLERY = [
-    { id: 1, src: "images/memorial_tombstone.png", category: "Memorials", title: "Granite Tombstone" },
-    { id: 2, src: "images/memorial_azulejos.png", category: "Memorials", title: "Azulejos Tile Monument" },
-    { id: 3, src: "images/memorial_restoration.png", category: "Memorials", title: "Grave Restoration" },
-    { id: 4, src: "images/home_nameplate.png", category: "Home", title: "Granite Name Plate" },
-    { id: 5, src: "images/home_gate_sign.png", category: "Home", title: "Gate Signage" },
-    { id: 6, src: "images/home_tulsi.png", category: "Home", title: "Tulsi Vrindavan Etching" },
-    { id: 7, src: "images/business_foundation.png", category: "Business", title: "Foundation Stone" },
-    { id: 8, src: "images/business_altar.png", category: "Business", title: "Altar Engraving" },
-    { id: 9, src: "images/business_resort.png", category: "Business", title: "Resort Entrance Rock" },
-    { id: 10, src: "images/niche_pet.png", category: "Niche", title: "Pet Memorial" }
+    { id: 1, src: "images/memorial_tombstone.webp", category: "Memorials", title: "Granite Tombstone" },
+    { id: 2, src: "images/memorial_azulejos.webp", category: "Memorials", title: "Azulejos Tile Monument" },
+    { id: 3, src: "images/memorial_restoration.webp", category: "Memorials", title: "Grave Restoration" },
+    { id: 4, src: "images/home_nameplate.webp", category: "Home", title: "Granite Name Plate" },
+    { id: 5, src: "images/home_gate_sign.webp", category: "Home", title: "Gate Signage" },
+    { id: 6, src: "images/home_tulsi.webp", category: "Home", title: "Tulsi Vrindavan Etching" },
+    { id: 7, src: "images/business_foundation.webp", category: "Business", title: "Foundation Stone" },
+    { id: 8, src: "images/business_altar.webp", category: "Business", title: "Altar Engraving" },
+    { id: 9, src: "images/business_resort.webp", category: "Business", title: "Resort Entrance Rock" },
+    { id: 10, src: "images/niche_pet.webp", category: "Niche", title: "Pet Memorial" }
 ];
 
 const DataManager = {
@@ -164,7 +164,7 @@ const DataManager = {
                 icon: "fa-cross",
                 description: "Granite tombstones, Azulejos tiles, and grave restoration for Catholic, Hindu, & Muslim communities.",
                 category: "Memorials",
-                image: "images/memorial_tombstone.png"
+                image: "images/memorial_tombstone.webp"
             },
             {
                 id: "home",
@@ -172,7 +172,7 @@ const DataManager = {
                 icon: "fa-home",
                 description: "Premium nameplates, gate signs, and Tulsi Vrindavan etching for your dream home.",
                 category: "Home",
-                image: "images/home_nameplate.png"
+                image: "images/home_nameplate.webp"
             },
             {
                 id: "business",
@@ -180,7 +180,7 @@ const DataManager = {
                 icon: "fa-church",
                 description: "Foundation stones, altar engravings, and resort signage for institutions and businesses.",
                 category: "Business",
-                image: "images/business_foundation.png"
+                image: "images/business_foundation.webp"
             },
             {
                 id: "niche",
@@ -188,7 +188,7 @@ const DataManager = {
                 icon: "fa-paw",
                 description: "Pet memorials, bar countertops, and custom artistic engravings.",
                 category: "Niche",
-                image: "images/niche_pet.png"
+                image: "images/niche_pet.webp"
             }
         ];
     },

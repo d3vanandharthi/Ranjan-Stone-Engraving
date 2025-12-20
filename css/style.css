@@ -643,3 +643,38 @@ footer p {
         background-attachment: fixed;
     }
 }
+
+/* Instagram Grid */
+.instagram-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.instagram-grid .instagram-media {
+    min-width: auto !important;
+    width: 100% !important;
+    margin: 0 !important;
+    border-radius: 5px !important;
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+}
+
+/* Hide the white bottom part of Instagram cards if possible by negative margin hack */
+.instagram-grid blockquote {
+    background: transparent !important;
+}
+
+@media (max-width: 992px) {
+    .instagram-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .instagram-grid {
+        grid-template-columns: 1fr;
+    }
+}

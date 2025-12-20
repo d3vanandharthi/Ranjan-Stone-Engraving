@@ -79,4 +79,29 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
+
+    // Lazy Load Instagram Embed Script
+    // Only loads the heavy Instagram script when the user scrolls down to the section
+    const instagramGrid = document.querySelector('.instagram-grid');
+    if (instagramGrid) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Create and append the script
+                    const script = document.createElement('script');
+                    script.src = "https://www.instagram.com/embed.js";
+                    script.async = true;
+                    document.body.appendChild(script);
+
+                    // Stop observing once loaded
+                    observer.unobserve(entry.target);
+                    console.log('Instagram script loaded lazily');
+                }
+            });
+        }, {
+            rootMargin: '200px' // Start loading 200px before the element is visible
+        });
+
+        observer.observe(instagramGrid);
+    }
 });

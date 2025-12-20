@@ -517,6 +517,8 @@ footer p {
     }
 
     .dropdown {
+        display: flex;
+        /* FIXED: Enable flexbox so column direction works */
         flex-direction: column;
         width: 100%;
         height: auto;

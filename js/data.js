@@ -168,27 +168,43 @@ const DataManager = {
             },
             {
                 id: "home",
-                title: "For Home",
+                title: "House Name Plates",
                 icon: "fa-home",
                 description: "Premium nameplates, gate signs, and Tulsi Vrindavan etching for your dream home.",
                 category: "Home",
                 image: "images/home_nameplate.webp"
             },
             {
-                id: "business",
-                title: "Business & Church",
-                icon: "fa-church",
-                description: "Foundation stones, altar engravings, and resort signage for institutions and businesses.",
+                id: "foundation",
+                title: "Foundation & Inauguration",
+                icon: "fa-building",
+                description: "Official Granite Foundation Stones (Shilanyas) and Inauguration Plaques for new buildings.",
                 category: "Business",
                 image: "images/business_foundation.webp"
             },
             {
-                id: "niche",
-                title: "Specialty & Artistic",
+                id: "religious",
+                title: "Temple & Church Work",
+                icon: "fa-place-of-worship",
+                description: "Altar engravings, Donor Name Slabs, and religious scripture inscriptions.",
+                category: "Business",
+                image: "images/business_altar.webp"
+            },
+            {
+                id: "pet",
+                title: "Pet Memorials",
                 icon: "fa-paw",
-                description: "Pet memorials, bar countertops, and custom artistic engravings.",
+                description: "Loving stone tributes for your faithful dogs and cats.",
                 category: "Niche",
                 image: "images/niche_pet.webp"
+            },
+            {
+                id: "commercial",
+                title: "Commercial Signage",
+                icon: "fa-hotel",
+                description: "Rustic resort entrance rocks, hotel wayfinding, and durable office signage.",
+                category: "Business",
+                image: "images/business_resort.webp"
             }
         ];
     },

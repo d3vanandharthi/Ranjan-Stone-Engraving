@@ -532,9 +532,14 @@ footer p {
         box-shadow: none;
         border: none;
         display: flex;
+        flex-direction: column;
+        /* FIXED: Stack items vertically */
+        gap: 10px;
+        /* FIXED: Add spacing between items */
         /* Always show on mobile for simplicity, or we can toggle */
         align-items: center;
-        padding: 0;
+        padding: 10px 0;
+        /* Add padding top/bottom */
     }
 
     .dropdown-content a {

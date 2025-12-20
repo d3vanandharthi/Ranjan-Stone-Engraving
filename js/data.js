@@ -89,13 +89,110 @@ const DEFAULT_BLOGS = [
         author: "Ranjan Engraving",
         image: "images/home_nameplate.webp",
         content: `
-            <p>Your nameplate is the handshake of your home. It welcomes guests and gives a hint of your style before they even step inside. Here are a few tips for designing the perfect one.</p>
+            <p>Your nameplate is the handshake of your home. It welcomes guests and gives a hint of your style before they even step inside. Here are the tips for designing the perfect one.</p>
             <h3>Visibility</h3>
             <p>Ensure the font size is large enough to be read from the street. High contrast is key—gold text on black granite is the most readable combination.</p>
             <h3>Style Match</h3>
             <p>If you have a modern villa, go for sleek lines and sans-serif fonts. For a Portuguese-style heritage home, an Azulejos tile or a granite slab with a classic serif font and a floral border fits perfectly.</p>
             <h3>Content</h3>
             <p>Keep it simple. The house name and the family name are essential. Adding the house number helps with delivery and navigation.</p>
+        `
+    },
+    {
+        id: 7,
+        title: "Top 10 Stone Engraving Designs for Name Plates in Goa",
+        date: "2025-12-21",
+        author: "Ranjan Engraving",
+        image: "images/home_nameplate.webp",
+        content: `
+            <p>Your name plate is more than just an address; it's the first impression of your Goan home. Whether you live in a Portuguese-style villa in Assagao or a modern apartment in Panjim, choosing the right design is crucial. Here are the top 10 trending stone engraving designs in Goa for 2025.</p>
+            
+            <h3>1. The Classic Gold on Black Granite</h3>
+            <p>Nothing beats the timeless elegance of gold leaf lettering on absolute black granite. It offers high contrast, making it readable from a distance, and withstands the Goan monsoon perfectly.</p>
+
+            <h3>2. Azulejos-Inspired Floral Borders</h3>
+            <p>Paying homage to Goa's Portuguese heritage, these name plates feature intricate blue and white floral motifs painted or etched around the edges of a white marble slab.</p>
+
+            <h3>3. Modern Minimalist Limestone</h3>
+            <p>For contemporary homes, polished limestone with deep, unpainted V-groove engraving offers a subtle, sophisticated look that plays with light and shadow.</p>
+
+            <h3>4. The "Tulsi Vrindavan" Motif</h3>
+            <p>A popular choice for Hindu households, featuring a small, engraved Tulsi plant icon alongside the family name, symbolizing prosperity and devotion.</p>
+
+            <h3>5. Rustic River Boulder</h3>
+            <p>Perfect for garden gates in North Goa, a natural river boulder with the house name roughly hewn into the face creates an organic, welcoming vibe.</p>
+
+            <h3>6. Laser-Etched Portraits</h3>
+            <p>Using laser technology, we can etch a photorealistic image of your ancestral home or a family portrait directly onto black granite.</p>
+
+            <h3>7. Devanagari & English Fusion</h3>
+            <p>A bilingual design featuring the family name in both English and Devanagari script, catering to all visitors and respecting local culture.</p>
+
+            <h3>8. The "Susegad" Scroll</h3>
+            <p>A granite slab cut in the shape of an antique scroll, often used for "Villa" names, giving an old-world charm.</p>
+
+            <h3>9. Backlit Onyx</h3>
+            <p>For luxury villas, a translucent onyx slab with engraved letters, backlit by LED, creates a stunning glowing effect at night.</p>
+
+            <h3>10. Family Crest & Coat of Arms</h3>
+            <p>For families with deep roots in Goa, engraving the family crest or coat of arms adds a layer of history and prestige to the entrance.</p>
+            
+            <p><strong>Ready to design your custom name plate?</strong> Visit our workshop in Mapusa to see these samples in person!</p>
+        `
+    },
+    {
+        id: 8,
+        title: "Granite vs Marble Name Plates: The Ultimate Guide for Goan Homes",
+        date: "2025-12-22",
+        author: "Devanand",
+        image: "images/granite.webp",
+        content: `
+            <p>Living in Goa means dealing with heavy monsoons, salty sea air, and intense tropical sun. Choosing the right material for your outdoor name plate isn't just about aesthetics; it's about longevity. Let's compare the two heavyweights: Granite vs. Marble.</p>
+
+            <h3>1. Durability in Coastal Climate</h3>
+            <p><strong>Granite:</strong> This igneous rock is one of the hardest natural substances. It is virtually impervious to water, salt, and acid rain. For a home in Calangute or Candolim facing the sea breeze, granite is the champion.</p>
+            <p><strong>Marble:</strong> While beautiful, marble is softer and porous. Over time, the salty air can cause "pitting" on the surface, and mold may grow in the pores if not sealed regularly.</p>
+
+            <h3>2. Visibility & Contrast</h3>
+            <p><strong>Granite:</strong> Black or Red Granite provides a dark background that makes Gold or Silver lettering pop. This high contrast ensures your postman or Swiggy delivery driver can find you easily.</p>
+            <p><strong>Marble:</strong> White marble offers a classic look, but requires dark paint (black or navy blue) for legibility. If the paint fades, the text becomes hard to read against the light background.</p>
+
+            <h3>3. Maintenance Requirements</h3>
+            <p><strong>Granite:</strong> Zero maintenance. A simple wipe with a damp cloth once a month keeps it shiny. It does not stain easily.</p>
+            <p><strong>Marble:</strong> Requires annual sealing to prevent staining and yellowing. You may need to scrub it gently with a mild cleaner to remove algae growth during the rains.</p>
+
+            <h3>The Verdict for Goa</h3>
+            <p>If you want a <strong>"fit it and forget it"</strong> solution that looks brand new for decades, go with <strong>Black Granite</strong>. If you prioritize the <strong>heritage, old-world aesthetic</strong> and don't mind a little maintenance, <strong>White Marble</strong> is unmatched in beauty.</p>
+        `
+    },
+    {
+        id: 9,
+        title: "Memorial Stone Etiquette: How to Create a Lasting Tribute",
+        date: "2025-12-23",
+        author: "Ranjan Engraving",
+        image: "images/memorial_tombstone.webp",
+        content: `
+            <p>Creating a memorial stone is an emotional journey. It is the final physical act of love we perform for the departed. In Goa, with our diverse religious traditions, understanding the etiquette and options for gravestones is important.</p>
+
+            <h3>1. Church Restrictions & Permissions</h3>
+            <p>Before ordering a stone, always check with your Parish Priest. Some cemeteries in Goa (like in Panjim or Margao) have strict rules regarding the size, height, and material of tombstones to ensure uniformity.</p>
+
+            <h3>2. Choosing the Right Inscription</h3>
+            <p>Less is often more. A crowded stone is hard to read.
+            <br><strong>Essential:</strong> Name, Dates of Birth & Death.
+            <br><strong>Optional:</strong> A short epitaph (e.g., "Always in our hearts"), a bible verse, or relationship (e.g., "Beloved Husband & Father").
+            <br><strong>Tip:</strong> Ensure the spelling of names matches official church records.</p>
+
+            <h3>3. Including Photos</h3>
+            <p>In Goa, it's common to include a ceramic photo plaque. We recommend high-quality Italian ceramic photos that are fired at high temperatures to prevent fading in the sun. Avoid standard laminated photos as they water-damage quickly.</p>
+
+            <h3>4. The Unveiling Ceremony</h3>
+            <p>It is customary to have the tombstone ready for the "Month's Mind" mass or the first death anniversary. Plan ahead—quality stone engraving takes 2-3 weeks. Don't rush the process; allow time for the artist to do their best work.</p>
+
+            <h3>5. Future-Proofing</h3>
+            <p>If the grave is for a couple, consider a "Double Depth" stone design where the spouse's name can be added later without removing the entire monument. This is a thoughtful and cost-effective decision.</p>
+
+            <p><em>Need guidance? We are familiar with the regulations of most major cemeteries in Bardez and Salcete. Visit us for a compassionate consultation.</em></p>
         `
     }
 ];
@@ -115,15 +212,15 @@ const DEFAULT_GALLERY = [
 
 const DataManager = {
     init: function () {
-        if (!localStorage.getItem('ranjan_blogs')) {
-            localStorage.setItem('ranjan_blogs', JSON.stringify(DEFAULT_BLOGS));
+        if (!localStorage.getItem('ranjan_blogs_v2')) {
+            localStorage.setItem('ranjan_blogs_v2', JSON.stringify(DEFAULT_BLOGS));
         }
-        // Always update gallery with new images on init for this update
-        localStorage.setItem('ranjan_gallery', JSON.stringify(DEFAULT_GALLERY));
+        // Always update gallery with new images on init
+        localStorage.setItem('ranjan_gallery_v2', JSON.stringify(DEFAULT_GALLERY));
     },
 
     getBlogs: function () {
-        return JSON.parse(localStorage.getItem('ranjan_blogs')) || [];
+        return JSON.parse(localStorage.getItem('ranjan_blogs_v2')) || [];
     },
 
     getBlogById: function (id) {
@@ -136,24 +233,24 @@ const DataManager = {
         blog.id = Date.now(); // Simple ID generation
         blog.date = new Date().toISOString().split('T')[0];
         blogs.unshift(blog);
-        localStorage.setItem('ranjan_blogs', JSON.stringify(blogs));
+        localStorage.setItem('ranjan_blogs_v2', JSON.stringify(blogs));
     },
 
     deleteBlog: function (id) {
         let blogs = this.getBlogs();
         blogs = blogs.filter(b => b.id != id);
-        localStorage.setItem('ranjan_blogs', JSON.stringify(blogs));
+        localStorage.setItem('ranjan_blogs_v2', JSON.stringify(blogs));
     },
 
     getGallery: function () {
-        return JSON.parse(localStorage.getItem('ranjan_gallery')) || [];
+        return JSON.parse(localStorage.getItem('ranjan_gallery_v2')) || [];
     },
 
     addToGallery: function (item) {
         const gallery = this.getGallery();
         item.id = Date.now();
         gallery.push(item);
-        localStorage.setItem('ranjan_gallery', JSON.stringify(gallery));
+        localStorage.setItem('ranjan_gallery_v2', JSON.stringify(gallery));
     },
 
     getServices: function () {

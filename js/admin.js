@@ -140,15 +140,15 @@ const DEFAULT_GALLERY = ${JSON.stringify(gallery, null, 4)};
 
 const DataManager = {
     init: function () {
-        if (!localStorage.getItem('ranjan_blogs')) {
-            localStorage.setItem('ranjan_blogs', JSON.stringify(DEFAULT_BLOGS));
+        if (!localStorage.getItem('ranjan_blogs_v2')) {
+            localStorage.setItem('ranjan_blogs_v2', JSON.stringify(DEFAULT_BLOGS));
         }
         // Always update gallery with new images on init for this update
-        localStorage.setItem('ranjan_gallery', JSON.stringify(DEFAULT_GALLERY));
+        localStorage.setItem('ranjan_gallery_v2', JSON.stringify(DEFAULT_GALLERY));
     },
 
     getBlogs: function () {
-        return JSON.parse(localStorage.getItem('ranjan_blogs')) || [];
+        return JSON.parse(localStorage.getItem('ranjan_blogs_v2')) || [];
     },
 
     getBlogById: function (id) {
@@ -161,24 +161,24 @@ const DataManager = {
         blog.id = Date.now(); // Simple ID generation
         blog.date = new Date().toISOString().split('T')[0];
         blogs.unshift(blog);
-        localStorage.setItem('ranjan_blogs', JSON.stringify(blogs));
+        localStorage.setItem('ranjan_blogs_v2', JSON.stringify(blogs));
     },
 
     deleteBlog: function (id) {
         let blogs = this.getBlogs();
         blogs = blogs.filter(b => b.id != id);
-        localStorage.setItem('ranjan_blogs', JSON.stringify(blogs));
+        localStorage.setItem('ranjan_blogs_v2', JSON.stringify(blogs));
     },
 
     getGallery: function () {
-        return JSON.parse(localStorage.getItem('ranjan_gallery')) || [];
+        return JSON.parse(localStorage.getItem('ranjan_gallery_v2')) || [];
     },
 
     addToGallery: function (item) {
         const gallery = this.getGallery();
         item.id = Date.now();
         gallery.push(item);
-        localStorage.setItem('ranjan_gallery', JSON.stringify(gallery));
+        localStorage.setItem('ranjan_gallery_v2', JSON.stringify(gallery));
     },
 
     getServices: function () {
@@ -189,31 +189,47 @@ const DataManager = {
                 icon: "fa-cross",
                 description: "Granite tombstones, Azulejos tiles, and grave restoration for Catholic, Hindu, & Muslim communities.",
                 category: "Memorials",
-                image: "images/memorial_tombstone.png"
+                image: "images/memorial_tombstone.webp"
             },
             {
                 id: "home",
-                title: "For Home",
+                title: "House Name Plates",
                 icon: "fa-home",
                 description: "Premium nameplates, gate signs, and Tulsi Vrindavan etching for your dream home.",
                 category: "Home",
-                image: "images/home_nameplate.png"
+                image: "images/home_nameplate.webp"
             },
             {
-                id: "business",
-                title: "Business & Church",
-                icon: "fa-church",
-                description: "Foundation stones, altar engravings, and resort signage for institutions and businesses.",
+                id: "foundation",
+                title: "Foundation & Inauguration",
+                icon: "fa-building",
+                description: "Official Granite Foundation Stones (Shilanyas) and Inauguration Plaques for new buildings.",
                 category: "Business",
-                image: "images/business_foundation.png"
+                image: "images/business_foundation.webp"
             },
             {
-                id: "niche",
-                title: "Specialty & Artistic",
+                id: "religious",
+                title: "Temple & Church Work",
+                icon: "fa-place-of-worship",
+                description: "Altar engravings, Donor Name Slabs, and religious scripture inscriptions.",
+                category: "Business",
+                image: "images/business_altar.webp"
+            },
+            {
+                id: "pet",
+                title: "Pet Memorials",
                 icon: "fa-paw",
-                description: "Pet memorials, bar countertops, and custom artistic engravings.",
+                description: "Loving stone tributes for your faithful dogs and cats.",
                 category: "Niche",
-                image: "images/niche_pet.png"
+                image: "images/niche_pet.webp"
+            },
+            {
+                id: "commercial",
+                title: "Commercial Signage",
+                icon: "fa-hotel",
+                description: "Rustic resort entrance rocks, hotel wayfinding, and durable office signage.",
+                category: "Business",
+                image: "images/business_resort.webp"
             }
         ];
     },

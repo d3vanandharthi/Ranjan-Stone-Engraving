@@ -504,7 +504,7 @@ footer p {
         background: var(--bg-darker);
         flex-direction: column;
         align-items: center;
-        justify-content: flexing-start;
+        justify-content: flex-start;
         /* Changed to start so we can scroll if needed */
         padding-top: 40px;
         overflow-y: auto;
